@@ -162,8 +162,18 @@
                     
                   
                   
-                    
-        @media (max-width: 568px) {
+        /* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+} 
+        @media screen and (max-width: 568px) {
             .form-div{
                 font-size: 1rem;
                 margin-top: 5rem;
@@ -173,6 +183,18 @@
             position: relative;
             z-index: 501;
           }
+        @media screen and (max-width:1257px) {
+          form{
+            width: 80vw!important;
+
+          }
+          .item-div{
+            flex-direction: column;
+          }
+          .item{
+            width: 100%!important;
+          }
+        }
           
     </style>
 
@@ -276,7 +298,7 @@
             </div>
             <!-- - logo -->
             <!-- burger icon -->
-            <div class="col-auto header__col" style="display: flex; flex-direction: row-reverse; gap:3rem; align-items: center;font-size: 1.2rem;">
+            <div class="col-auto header__col" style="display: flex; flex-direction: row-reverse; gap:2rem; align-items: center;font-size: 1.2rem;">
               <div class="header__burger" id="js-burger" data-arts-cursor="data-arts-cursor" data-arts-cursor-scale="1.7" data-arts-cursor-magnetic="data-arts-cursor-magnetic" data-arts-cursor-hide-native="true">
                 <div class="header__burger-line"></div>
                 <div class="header__burger-line"></div>
@@ -410,7 +432,7 @@
 
 
             <div class="form-div">
-                <form class="" style="width: 60vw; margin:auto; display: flex; flex-direction:column;" enctype="multipart/form-data" accept-charset="UTF-8" action="https://www.formbackend.com/f/6f846b25eb811066" method="POST">
+                <form class="" style="width: 60vw; margin:auto; display: flex; flex-direction:column;" enctype="multipart/form-data" accept-charset="UTF-8" action="" method="POST">
                     
                     
                     <!--FIRST SECTION-->
@@ -420,7 +442,7 @@
                     </div>
                     <!--SECOND SECTION-->
                     
-                    <div style="display: flex;">
+                    <div class="item-div" style="display: flex;">
                         <div class="item" style="width: 50%;">
                             <label for="prénom">Quel est votre prénom ?<span>*</span></label>
                             <input type="text" id="prénom" name="prénom" required>
@@ -430,7 +452,7 @@
                             <input type="text" id="nom" name="nom" required>
                         </div>
                     </div>
-                    <div style="display: flex;">
+                    <div class="item-div" style="display: flex;">
                         <div class="item" style="width: 50%;">
                             <label for="téléphone">Quel est votre numéro de téléphone ?  <span>*</span></label>
                             <input type="number" id="téléphone" name="téléphone" required>
@@ -451,7 +473,7 @@
                         <input type="text" id="adresse-postale" name="adresse-postale" required>
                     </div>
                     <!--THIRD SECTION-->
-                    <div style="display: flex;">
+                    <div class="item-div" style="display: flex;">
                         <div class="item" style="width: 50%;">
                             <label for="CV">Envoyez-nous votre CV <span>*</span></label>
                             <input type="file" id="CV" name="CV" required>
@@ -464,7 +486,7 @@
                       
                     <!--Fourth SECTION-->
                     <div style="height:0; width:100%; border-bottom:rgb(212, 212, 212) 1px solid;margin-top:1.5rem; margin-bottom:1.5rem"></div>
-                    <div style="display: flex;">
+                    <div class="item-div" style="display: flex;">
                         <div class="item" style="width: 50%;">
                             <label for="1er-parents-Nom-Prénom">1er parents : Nom Prénom  <span>*</span></label>
                             <input type="text" id="1er-parents-Nom-Prénom" name="1er-parents-Nom-Prénom" required>
@@ -474,7 +496,7 @@
                             <input type="number" id="1er-parents-téléphone" name="1er-parents-téléphone" required>
                         </div>
                     </div>
-                    <div style="display: flex;">
+                    <div class="item-div" style="display: flex;">
                         <div class="item" style="width: 50%;">
                             <label for="2e-parents-Nom-Prénom">2e parents : Nom Prénom  <span>*</span></label>
                             <input type="text" id="2e-parents-Nom-Prénom" name="2e-parents-Nom-Prénom" required>
@@ -484,7 +506,7 @@
                             <input type="number" id="2e-parents-téléphone" name="2e-parents-téléphone" required>
                         </div>
                     </div>
-                    <div style="display: flex;">
+                    <div class="item-div" style="display: flex;">
                         <div class="item" style="width: 50%;">
                             <label for="3e-parents-Nom-Prénom">3e parents : Nom Prénom  <span>*</span></label>
                             <input type="text" id="3e-parents-Nom-Prénom" name="3e-parents-Nom-Prénom" required>
@@ -494,26 +516,7 @@
                             <input type="number" id="3e-parents-téléphone" name="3e-parents-téléphone" required>
                         </div>
                     </div>
-                    <div style="display: flex;">
-                        <div class="item" style="width: 50%;">
-                            <label for="4e-parents-Nom-Prénom">4e parents : Nom Prénom <span>*</span> </label>
-                            <input type="text" id="4e-parents-Nom-Prénom" name="4e-parents-Nom-Prénom" required>
-                        </div>
-                        <div class="item" style="width: 50%;">
-                            <label for="4e-parents-téléphone">4e parents : numéro de téléphone<span>*</span></label>
-                            <input type="number" id="4e-parents-téléphone" name="4e-parents-téléphone" required>
-                        </div>
-                    </div>
-                    <div style="display: flex;">
-                        <div class="item" style="width: 50%;">
-                            <label for="5e-parents-Nom-Prénom">5e parents : Nom Prénom  <span>*</span></label>
-                            <input type="text" id="5e-parents-Nom-Prénom" name="5e-parents-Nom-Prénom" required>
-                        </div>
-                        <div class="item" style="width: 50%;">
-                            <label for="5e-parents-téléphone">5e parents : numéro de téléphone<span>*</span></label>
-                            <input type="number" id="5e-parents-téléphone" name="5e-parents-téléphone" required>
-                        </div>
-                    </div>
+                    
                     
                     <div class="btn-block">
                         <button type="submit">Postuler</button>
