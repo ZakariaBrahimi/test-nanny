@@ -65,7 +65,7 @@
               margin-top: 5rem;
           }
       form {
-          width: 52vw;
+          width: 60vw;
           padding: 20px;
           border-radius: 6px;
           background: #fff;
@@ -175,16 +175,24 @@
                       width: 50%;
                   }
                   .item-select{
-                      display: flex!important; 
-                      padding:0;
-                      width: calc(100% - 10px);
-                      gap: 2rem;
+                      display: flex!important;
+                      flex-direction: column!important;
+                      gap: 0!important;
+                      
+                      padding: 0!important;
                   }
                   .btn-block button{
                     width: auto!important;
                   }
                   .multiselect-dropdown{
-                    width: 350px!important;
+                    width: 98%!important;
+                    padding: 5px!important;
+                    margin-bottom: 10px!important;
+                  }
+                  .multiselect-dropdown span.placeholder{
+                    margin-right: 0!important;
+                    margin-bottom: 0!important;
+                    padding: 0!important;
                   }
                     
       @media (max-width: 568px) {
@@ -510,10 +518,7 @@ input[type=number] {
                             <input type="text" id="nom" name="nom" required>
                         </div>
                     </div>
-                    <div class="item">
-                      <label for="adresse-postale">Adresse :  <span>*</span></label>
-                      <input type="text" id="adresse-postale" name="adresse-postale" required>
-                  </div>
+                    
                     <div class="item-div" style="display: flex;">
                       <div class="item" style="width: 50%;">
                         <label for="date-de-naissance">Date de la garde :  <span>*</span></label>
@@ -526,15 +531,29 @@ input[type=number] {
                         </div>
                     </div>
                     
-                    <div class="item-div" style="display: flex;">
+                    <div class="item-div" style="display: flex;align-items: center">
                         
-                        <div class="item" style="width: 50%;">
-                          <label for="téléphone">Numéro de Téléphone :   <span>*</span></label>
-                          <input type="number" id="téléphone" name="téléphone" required>
-                      </div>
-                        <div class="item" style="width: 50%;">
+                        
+                        <div class="item">
                             <label for="enfants">Nombre d'enfants :  <span>*</span></label>
                             <input type="number" id="enfants" name="enfants" required>
+                        </div>
+                        <div class="item item-select from-container-child" >
+                          <label for="field2" >Âge :  <span>*</span></label>
+                          <select placeholder="Choisissez autant que vous le souhaitez" name="field2" id="field2" multiple multiselect-search="true" multiselect-max-items="7" onchange="console.log(this.selectedOptions)">
+                            <option value="A" >0 - 1 ans</option>
+                            <option value="B">2 ans</option>
+                            <option value="C">3 ans</option>
+                            <option value="D">4 ans</option>
+                            <option value="E">5 ans</option>
+                            <option value="F">6 ans</option>
+                            <option value="G">7 ans</option>
+                            <option value="H">8 ans</option>
+                            <option value="I">9 ans</option>
+                            <option value="J">10 ans</option>
+                            <option value="K">11 ans</option>
+                            <option value="L">12 ans</option>
+                          </select>
                         </div>
                     </div>
 
@@ -542,22 +561,18 @@ input[type=number] {
                     
                    
                     
-                    <div class="item item-select" >
-                      <label for="field2" >Âge :  <span>*</span></label>
-                      <select placeholder="Choisissez autant que vous le souhaitez" name="field2" id="field2" multiple multiselect-search="true" multiselect-select-all="true" multiselect-max-items="7" onchange="console.log(this.selectedOptions)">
-                        <option value="A" >0 - 1 ans</option>
-                        <option value="B">2 ans</option>
-                        <option value="C">3 ans</option>
-                        <option value="D">4 ans</option>
-                        <option value="E">5 ans</option>
-                        <option value="F">6 ans</option>
-                        <option value="G">7 ans</option>
-                        <option value="H">8 ans</option>
-                        <option value="I">9 ans</option>
-                        <option value="J">10 ans</option>
-                        <option value="K">11 ans</option>
-                        <option value="L">12 ans</option>
-                      </select>
+                    
+
+
+                    <div class="from-container " style="display: flex; align-items: center;">
+                      <div class="item from-container-child">
+                        <label for="téléphone">Numéro de Téléphone :  <span>*</span></label>
+                        <input type="number" id="téléphone" name="téléphone" required>
+                    </div>
+                    <div class="item from-container-child">
+                      <label for="adresse-postale"> Adresse :  <span>*</span></label>
+                      <input type="text" id="adresse-postale" name="adresse-postale" required>
+                  </div>
                     </div>
                     <div class="item">
                       <label for="Others"> D'autres informations à ajouter ? </label>
