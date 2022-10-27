@@ -174,6 +174,12 @@ input[type=number] {
                 font-size: 1rem;
                 margin-top: 5rem;
                 }
+                .item-div{
+                  flex-direction: column;
+                }
+                .item{
+                  width: 100%!important;
+                }
         }
           .header__container {
             position: relative;
@@ -184,12 +190,7 @@ input[type=number] {
               width: 80vw!important;
   
             }
-            .item-div{
-              flex-direction: column;
-            }
-            .item{
-              width: 100%!important;
-            }
+            
           }
           
     </style>
@@ -433,7 +434,7 @@ input[type=number] {
                   </div>
                   <div class="w-100"></div>
                   <div id="postulerForm-en" class="section-masthead__heading split-text js-split-text" data-split-text-type="lines,words" data-split-text-set="words">
-                    <h1 class="h1 mt-0 mb-0">Nanny Parisienne registration form
+                    <h1 class="h1 mt-0 mb-0">I apply
                     </h1>
                   </div>
                   <div class="w-100"></div>
@@ -445,86 +446,83 @@ input[type=number] {
 
 
             <div class="form-div">
-                <form class="" style="width: 60vw; margin:auto; display: flex; flex-direction:column;" enctype="multipart/form-data" accept-charset="UTF-8" action="" method="POST">
+                <form class="" style="width: 60vw; margin:auto; display: flex; flex-direction:column;" enctype="multipart/form-data" accept-charset="UTF-8" action="https://www.formbackend.com/f/725d15696a3da517" method="POST">
                     
                     <!--FIRST SECTION-->
                     <div class="item">
-                        <label for="email">Your Email<span>*</span></label>
+                        <label for="email">Email : <span>*</span></label>
                         <input type="email" id="email" name="email" required>
                     </div>
                     <!--SECOND SECTION-->
                     
                     <div class="item-div" style="display: flex;">
                         <div class="item" style="width: 50%;">
-                            <label for="prénom">What's your first name ?<span>*</span></label>
+                            <label for="prénom">First Name : <span>*</span></label>
                             <input type="text" id="prénom" name="prénom" required>
                         </div>
                         <div class="item" style="width: 50%;">
-                            <label for="nom">what's your last name ? <span>*</span></label>
+                            <label for="nom">Last Name : <span>*</span></label>
                             <input type="text" id="nom" name="nom" required>
                         </div>
                     </div>
                     <div class="item-div" style="display: flex;">
                         <div class="item" style="width: 50%;">
-                            <label for="téléphone">what's your phone number ?  <span>*</span></label>
+                            <label for="téléphone">Phone Number : <span>*</span></label>
                             <input type="number" id="téléphone" name="téléphone" required>
                         </div>
                         <div class="item" style="width: 50%;">
-                            <label for="numéro-de-SIREN">What is your SIREN number? (optional)</label>
+                            <label for="numéro-de-SIREN">Siren Number : (optional)</label>
                             <input type="number" id="numéro-de-SIREN" name="numéro-de-SIREN" required>
                         </div>
                     </div>
-                    <div class="item">
-                        <label for="date-de-naissance">What's your birthday ? <span>*</span></label>
-                        <input type="date" id="date-de-naissance" name="date-de-naissance" required>
-                        <i class="fas fa-calendar-alt"></i>
-                    </div>
                     
-                    <div class="item">
-                        <label for="adresse-postale">What is your mailing address? <span>*</span></label>
-                        <input type="text" id="adresse-postale" name="adresse-postale" required>
-                    </div>
                     <!--THIRD SECTION-->
                     <div class="item-div" style="display: flex;">
-                        <div class="item" style="width: 50%;">
-                            <label for="CV">Send us your CV <span>*</span></label>
-                            <input type="file" id="CV" name="CV" required>
-                          </div>
-                          <div class="item" style="width: 50%;">
-                            <label for="casier-judiciaire">Send us your criminal record certificate  <span>*</span></label>
-                            <input type="file" id="casier-judiciaire" name="casier-judiciaire" required>
-                        </div>
+                      <div class="item" style="width: 50%;">
+                          <label for="date-de-naissance">Date of Birthday : <span>*</span></label>
+                          <input type="date" id="date-de-naissance" name="date-de-naissance" required>
+                          <i class="fas fa-calendar-alt"></i>
                       </div>
+                      <div class="item" style="width: 50%;">
+                        <label for="adresse-postale">Mailing Address : <span>*</span></label>
+                        <input type="text" id="adresse-postale" name="adresse-postale" required>
+                      </div>
+                      
+                    </div>
+                    <div class="item" style="">
+                      <label for="CV">Attach a Resume : <span>*</span></label>
+                      <input type="file" id="CV" name="CV" required>
+                    </div>
                       
                     <!--Fourth SECTION-->
                     <div style="height:0; width:100%; border-bottom:rgb(212, 212, 212) 1px solid;margin-top:1.5rem; margin-bottom:1.5rem"></div>
                     <div class="item-div" style="display: flex;">
                         <div class="item" style="width: 50%;">
-                            <label for="1er-parents-Nom-Prénom">1st parents: First name, Last name  <span>*</span></label>
+                            <label for="1er-parents-Nom-Prénom">Family 1 : First and Last Name  <span>*</span></label>
                             <input type="text" id="1er-parents-Nom-Prénom" name="1er-parents-Nom-Prénom" required>
                         </div>
                         <div class="item" style="width: 50%;">
-                            <label for="1er-parents-téléphone">1st parents: phone number<span>*</span></label>
+                            <label for="1er-parents-téléphone">Family 1 : Phone Number <span>*</span></label>
                             <input type="number" id="1er-parents-téléphone" name="1er-parents-téléphone" required>
                         </div>
                     </div>
                     <div class="item-div" style="display: flex;">
                         <div class="item" style="width: 50%;">
-                            <label for="2e-parents-Nom-Prénom">2nd parents : First name, Last name  <span>*</span></label>
+                            <label for="2e-parents-Nom-Prénom">Family 2 : First and Last Name  <span>*</span></label>
                             <input type="text" id="2e-parents-Nom-Prénom" name="2e-parents-Nom-Prénom" required>
                         </div>
                         <div class="item" style="width: 50%;">
-                            <label for="2e-parents-téléphone">2nd parents : phone number<span>*</span></label>
+                            <label for="2e-parents-téléphone">Family 2 : Phone Number <span>*</span></label>
                             <input type="number" id="2e-parents-téléphone" name="2e-parents-téléphone" required>
                         </div>
                     </div>
                     <div class="item-div" style="display: flex;">
                         <div class="item" style="width: 50%;">
-                            <label for="3e-parents-Nom-Prénom">3rd parents : First name, Last name  <span>*</span></label>
+                            <label for="3e-parents-Nom-Prénom">Family 3 : First and Last Name  <span>*</span></label>
                             <input type="text" id="3e-parents-Nom-Prénom" name="3e-parents-Nom-Prénom" required>
                         </div>
                         <div class="item"style="width: 50%;">
-                            <label for="3e-parents-téléphone">3rd parents : phone number<span>*</span></label>
+                            <label for="3e-parents-téléphone">Family 3 : Phone Number <span>*</span></label>
                             <input type="number" id="3e-parents-téléphone" name="3e-parents-téléphone" required>
                         </div>
                     </div>
