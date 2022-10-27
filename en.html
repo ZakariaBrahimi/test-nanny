@@ -52,7 +52,29 @@
         position: relative;
         z-index: 501;
       }
-      
+      .lazy, .lazy_loaded{
+        padding-bottom: 84%!important;
+      }
+      .section-image__wrapper {
+        
+        height: 52%!important;
+      }
+      @media screen and (max-width: 767px){
+      .section_h-800 {
+        max-height: 49vh!important;
+      }
+    }
+    .section-masthead__subheading.small-caps.mt-0.mb-1.mb-md-2.split-text{
+      margin-top: 8rem!important;
+    }
+    .split-text__line.overflow{
+      margin-bottom: 3rem;
+    }
+    @media screen and (max-width:450px) {
+      .section-masthead__subheading.small-caps.mt-0.mb-1.mb-md-2.split-text{
+        margin-top: 5rem!important;
+      }
+    }
     </style>
   </head>
   <body>
@@ -305,7 +327,7 @@
                   <div class="section-content__image">
                     <section class="section section-image z-50 section_h-800">
                       <div class="section-image__wrapper" data-arts-parallax="data-arts-parallax" data-arts-parallax-factor="0.15">
-                        <div class="lazy"><img data-src="img/assets/sectionAbout/Illustration mail.png" src="#" alt=""/></div>
+                        <div class="lazy"><img style="object-fit: contain; height: 65%;" data-src="img/assets/sectionAbout/Illustration mail.png" src="#" alt=""/></div>
                       </div>
                     </section>
                   </div>
@@ -691,7 +713,7 @@
                     <div class="section-content__image-inner">
                       <section class="section section-image">
                         <div class="section-image__wrapper" data-arts-parallax="data-arts-parallax" data-arts-parallax-factor="0.15">
-                          <div class="lazy"><img data-src="img/assets/sectionServices/service-1.2.jpg" src="#" alt="" width="1280" height="1920"/></div>
+                          <div class="lazy"><img style="object-fit: contain;" data-src="img/assets/sectionServices/service-1.2.jpg" src="#" alt="" width="1280" height="1920"/></div>
                         </div>
                       </section>
                     </div>
@@ -748,7 +770,7 @@ wish to spend <strong>a moment of relaxation in complete privacy</strong> can en
                     <div class="section-content__image-inner">
                       <section class="section section-image">
                         <div class="section-image__wrapper" data-arts-parallax="data-arts-parallax" data-arts-parallax-factor="0.15">
-                          <div class="lazy"><img data-src="img/assets/sectionServices/service-3.2.jpg" src="#" alt="" width="1920" height="1920"/></div>
+                          <div class="lazy"><img style="object-fit: contain;width: 87%; height: 93%;" data-src="img/assets/sectionServices/service-3.2.jpg" src="#" alt="" width="1920" height="1920"/></div>
                         </div>
                       </section>
                     </div>
